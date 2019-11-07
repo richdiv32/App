@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/auth_bg"
+    tools:context=".Auth.SetUpActivity">
+
+    <ScrollView
+        android:id="@+id/regForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/imageContainer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/avatarProgressBar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profile"
+                        android:visibility="visible"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        app:civ_border_width="2dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/input_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telephone"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/input_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gender"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/input_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Birthday"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="School"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_institution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Institution"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_faculty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Faculty"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Department"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ABOUT YOU (Optional)"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_relationship_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Relationship Status"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/input_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bio"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/finish_btn"
+                    android:layout_width="178dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_background"
+                    android:text="FINISH"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:background="@drawable/auth_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/close"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/profile"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/tv_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Change Photo"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="Full Name"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gender"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Birthday"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="School"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Department"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_faculty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Faculty"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_institution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Institution"
+                        app:met_floatingLabel="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Personal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/input_relationship_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Relationship Status"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bio"
+                        android:textColor="@color/white"
+                        app:met_floatingLabel="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
